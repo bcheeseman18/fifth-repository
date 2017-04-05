@@ -1,0 +1,226 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+
+header {
+    @include grid-row();
+
+
+    div.mailListBtn {
+        @include grid-column(2);
+        
+    }
+
+    h1 {
+        @include grid-column(8);
+        text-align: center;
+    }
+
+    div.signIn {
+        @include grid-column(2);
+        text-align: right;
+    }
+        .sign {
+            border-right: 3px solid gray;
+        }
+
+}
+
+section.navigation {
+    @include grid-row();
+    
+    ul {
+        @include grid-column(8);
+        @include grid-column-offset(2);
+        padding: 0;
+        
+    }
+
+    li {
+        @include grid-column(3);
+        display: inline-block;
+        text-align: center;
+        border: none;
+    }
+
+}
+
+section.jumboTron {
+    @include grid-row();
+
+        .bigPic {
+            @include grid-column(12);
+            background-image: url("https://fieldnotes.imgix.net/images/products/fn_utility_hero2.jpg?auto=format&fit=crop&h=510&ixlib=php-1.1.0&q=55&w=1300&s=a0dfdb2b379c3809cc531db8b5c21e70");
+            height: 500px;
+            background-size: cover;
+        }
+            .text {
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 15%;
+            line-height: 12px;
+        }
+
+            .text h1 {
+                font-size: 50px;
+            }
+
+            .linkOne {
+                color: white;
+                border: 2px solid white;
+                text-decoration: none;
+                padding: 8px;
+            }
+}
+
+section.featured {
+    @include grid-row();
+    height: 40vh;
+
+    .featuredLeft {
+        @include grid-column(8);
+        height: 100%;
+        background-image: url("https://fieldnotes.imgix.net/images/AB_brands.jpg?auto=format&ixlib=php-1.1.0&q=55&s=f795ccfa526ae21adadbf533b93ded92");
+
+     .text {
+            font-size: 15px;
+            text-align: center;
+            color: white;
+            margin-top: 10%;
+            line-height: 12px;
+        }
+
+            .text h1 {
+                font-size: 30px;
+            }
+
+            .linkTwo {
+                color: white;
+                border: 2px solid white;
+                text-decoration: none;
+                padding: 8px;
+            }
+        }            
+    
+    .featuredRight {
+        @include grid-column(4);
+        height: 100%;
+        background-image: url("https://fieldnotes.imgix.net/images/home_B_ledger.jpg?auto=format&ixlib=php-1.1.0&q=55&s=d77ca94d713b5825c0555f6ea61711c1");
+        
+         .text {
+            font-size: 20px;
+            text-align: center;
+            color:gray;
+            margin-top: 10%;
+            line-height: 20px;
+        }
+
+            h6 {
+                font-size: 15px;
+                color: black;
+            }
+
+            .linkThree {
+                color: black;
+                border: 2px solid black;
+                text-decoration: none;
+                padding: 8px;
+                font-size: 12px;
+            }
+
+    }
+
+    @media print, screen and (min-width: 40em) {
+        .featuredRight {
+            padding: 0;
+        }
+
+        .featuredLeft {
+            padding: 0;
+        }
+    }
+}
+
+section.merchandise {
+    @include grid-row();
+    
+
+    h2 {
+        @include grid-column(12);
+        display: block;
+        text-align: center;
+        border: none;
+        margin-bottom: 0;
+        font-size: 50px;
+    }
+
+    p {
+        @include grid-column(12);
+        display: block;
+        text-align: center;
+        border: none;
+        margin-top: 0;
+        font-size: 25px;
+        color: gray;
+        line-height: 5px;
+    }
+}
+
+section.products {
+    @include grid-row();
+   
+     ul {
+        padding: 0;
+    }
+
+     li {
+        @include grid-column(3);
+        list-style-type: none;
+        border: 1px dotted black;
+        display: block;
+    }
+
+    li img {
+        margin-bottom: 0;
+    }
+
+        .price p {
+        margin-top: 0;
+        margin-bottom: 35px;
+        line-height: 0;
+        text-align: center;
+        line-height: 0;
+    }
+
+        .red {
+            color: red;
+        }
+
+}
+
+footer {
+    @include grid-row();
+
+    .footerPic {
+        @include grid-column(12);
+        background-image: url("https://fieldnotes.imgix.net/images/kraft-bg.jpg?auto=format&ixlib=php-1.1.0&q=55&s=373323da9de5c0400dda656185f7b2a5");
+        height: 500px;
+        background-size: cover;
+    }
+
+    .madeIn {
+        font-size: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 15%;
+            line-height: 12px;
+    }
+
+    h1 {
+        @include grid-column(8);
+        font-size: 50px;
+        text-align: center;
+    }
+
+}
